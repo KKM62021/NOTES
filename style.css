@@ -1,0 +1,167 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body::selection{
+    
+    color: blue;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    
+}
+
+.nav-links li {
+    margin-right: 20px;
+    flex-direction: row;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #ccc;
+}
+
+.search-container {
+    padding: 20px;
+    text-align: center;
+}
+
+#search-input, #search-input2 {
+    width: 50%;
+    height: 30px;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+#search-input2{
+    max-width: 80%;
+}
+input:focus{
+    outline: none;
+}
+
+#search-button {
+    width: 100px;
+    height: 30px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #444;
+}
+
+#result-container {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Media queries for responsiveness */
+
+/* For screens smaller than 768px (tablets and mobile devices) */
+@media only screen and (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+    }
+    .nav-links li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    #search-input {
+        width: 80%;
+    }
+    #search-button {
+        width: 80%;
+    }
+}
+
+/* For screens smaller than 480px (small mobile devices) */
+@media only screen and (max-width: 480px) {
+    .nav-links {
+        flex-direction: row    ;
+    }
+    .nav-links li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    #search-input {
+        width: 90%;
+    }
+    #search-button {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .navbar{
+        flex-direction: row;
+        align-items: center;
+    }
+    .nav-links {
+        flex-direction: row;
+    }
+    .nav-links li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    #search-input {
+        width: 90%;
+    }
+    #search-button {
+        width: 10%;
+    }
+}
+.ul li{
+    margin: 10px;
+}
+section span{
+    width: 10px;
+    height: 10px;
+    border: 5px solid aqua;
+    background: aqua;
+    position: absolute;
+    top: 4px;
+}
+section h2{
+    margin-left: 25px;
+}
+section{
+    position: relative;
+}
+footer button{
+    
+} 
