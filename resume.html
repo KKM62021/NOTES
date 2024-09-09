@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Resources</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .resource-section {
+            margin-top: 30px;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.03);
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        .btn-download, .btn-preview {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .btn-download:hover, .btn-preview:hover {
+            background-color: #0056b3;
+            color: #fff;
+        }
+        .modal-content {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .modal-img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Notes Nest</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Docs</a></li>
+            <li><a href="career.html">Career</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Career Resources</h1>
+
+        <div class="resource-section">
+            <h2 class="section-title">Resume Templates</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="reume1.png" class="card-img-top" alt="Resume Preview">
+                        <div class="card-body">
+                            <h5 class="card-title">Professional Resume</h5>
+                            <p class="card-text">A clean and professional template suitable for most job applications.</p>
+                            <button class="btn btn-preview" data-toggle="modal" data-target="#resumeModal1">Preview</button>
+                            <a href="templates\Classic-Resume-12851.pptx" class="btn btn-download mt-2" download>Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="resume-preview-creative.png" class="card-img-top" alt="Creative Resume Preview">
+                        <div class="card-body">
+                            <h5 class="card-title">Creative Resume</h5>
+                            <p class="card-text">A visually appealing template for creative roles.</p>
+                            <button class="btn btn-preview" data-toggle="modal" data-target="#resumeModal2">Preview</button>
+                            <a href="resume-template-creative.docx" class="btn btn-download mt-2" download>Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="resource-section">
+            <h2 class="section-title">Cover Letter Templates</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="cover-letter-preview.png" class="card-img-top" alt="Cover Letter Preview">
+                        <div class="card-body">
+                            <h5 class="card-title">Standard Cover Letter</h5>
+                            <p class="card-text">A traditional cover letter template for most applications.</p>
+                            <button class="btn btn-preview" data-toggle="modal" data-target="#coverLetterModal1">Preview</button>
+                            <a href="cover-letter-template.docx" class="btn btn-download mt-2" download>Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="cover-letter-preview-modern.png" class="card-img-top" alt="Modern Cover Letter Preview">
+                        <div class="card-body">
+                            <h5 class="card-title">Modern Cover Letter</h5>
+                            <p class="card-text">A contemporary design for a standout application.</p>
+                            <button class="btn btn-preview" data-toggle="modal" data-target="#coverLetterModal2">Preview</button>
+                            <a href="cover-letter-template-modern.docx" class="btn btn-download mt-2" download>Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="resource-section">
+            <h2 class="section-title">LinkedIn Profile Templates</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="linkedin-profile-preview.png" class="card-img-top" alt="LinkedIn Profile Preview">
+                        <div class="card-body">
+                            <h5 class="card-title">LinkedIn Profile</h5>
+                            <p class="card-text">A professional LinkedIn profile template to enhance your online presence.</p>
+                            <button class="btn btn-preview" data-toggle="modal" data-target="#linkedinModal1">Preview</button>
+                            <a href="linkedin-profile-template.docx" class="btn btn-download mt-2" download>Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resume Modals -->
+    <div class="modal fade" id="resumeModal1" tabindex="-1" role="dialog" aria-labelledby="resumeModalLabel1" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="resumeModalLabel1">Professional Resume Preview</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="reume1.png" class="modal-img" alt="Professional Resume">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="resumeModal2" tabindex="-1" role="dialog" aria-labelledby="resumeModalLabel2" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="resumeModalLabel2">Creative Resume Preview</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="resume-template-creative.png" class="modal-img" alt="Creative Resume">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cover Letter Modals -->
+    <div class="modal fade" id="coverLetterModal1" tabindex="-1" role="dialog" aria-labelledby="coverLetterModalLabel1" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="coverLetterModalLabel1">Standard Cover Letter Preview</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="cover-letter-template.png" class="modal-img" alt="Standard Cover Letter">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="coverLetterModal2" tabindex="-1" role="dialog" aria-labelledby="coverLetterModalLabel2" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="coverLetterModalLabel2">Modern Cover Letter Preview</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="cover-letter-template-modern.png" class="modal-img" alt="Modern Cover Letter">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LinkedIn Profile Modal -->
+    <div class="modal fade" id="linkedinModal1" tabindex="-1" role="dialog" aria-labelledby="linkedinModalLabel1" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="linkedinModalLabel1">LinkedIn Profile Preview</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="linkedin-profile-template.png" class="modal-img" alt="LinkedIn Profile">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
